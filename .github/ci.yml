@@ -2,8 +2,7 @@ name: CI Automation Demo
 
 on:
   push:
-    branches:
-      - main
+    branches: [ "main" ] # Định dạng mảng viết gọn, tránh lỗi thụt dòng
 
 jobs:
   build-and-test:
@@ -15,7 +14,7 @@ jobs:
 
       - name: Run Code Linting and Test Simulation
         run: |
-          echo "--- BAT DAU TIEN HANH QUA TRINH KIEM TRA TU DONG (CI) ---"
+          echo "--- BAT DAU QUA TRINH KIEM TRA TU DONG (CI) ---"
           echo "Dang kiem tra cu phap file index.html..."
           grep -q "</html>" index.html && echo "✓ File HTML hop le, day du the dong."
           echo "--- KIEM TRA HOAN TAT - CODE DU DIEU KIEN TRIEN KHAI ---"
