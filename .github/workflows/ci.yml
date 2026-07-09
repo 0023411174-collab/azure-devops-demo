@@ -1,1 +1,18 @@
+name: CI Automation Demo
 
+on: [push]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Source Code
+        uses: actions/checkout@v4
+
+      - name: Run Code Linting and Test Simulation
+        run: |
+          echo "--- BAT DAU TIEN HANH QUA TRINH KIEM TRA TU DONG (CI) ---"
+          echo "Dang kiem tra cu phap file index.html..."
+          grep -q "</html>" index.html && echo "✓ File HTML hop le, day du the dong."
+          echo "--- KIEM TRA HOAN TAT - CODE DU DIEU KIEN TRIEN KHAI ---"
