@@ -1,6 +1,6 @@
 name: CI Automation Demo
 
-on: [push] # Kích hoạt với mọi cú push code, loại bỏ hoàn toàn việc thụt lề phức tạp ở đây!
+on: [push]
 
 jobs:
   build-and-test:
