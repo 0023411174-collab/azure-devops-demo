@@ -1,8 +1,6 @@
 name: CI Automation Demo
 
-on:
-  push:
-    branches: [ "main" ] # Định dạng mảng viết gọn, tránh lỗi thụt dòng
+on: [push] # Kích hoạt với mọi cú push code, loại bỏ hoàn toàn việc thụt lề phức tạp ở đây!
 
 jobs:
   build-and-test:
