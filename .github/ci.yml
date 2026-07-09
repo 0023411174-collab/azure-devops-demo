@@ -1,0 +1,22 @@
+name: CI Automation Demo
+
+on:
+  push:
+    branches: [ "main" ] # Kích hoạt tự động khi push code vào nhánh main
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest # Sử dụng môi trường máy ảo Ubuntu của GitHub
+
+    steps:
+    # Bước 1: Tải mã nguồn từ kho GitHub về máy ảo của Runner
+    - name: Checkout Source Code
+      uses: actions/checkout@v4
+
+    # Bước 2: Giả lập quá trình Kiểm thử / Quét mã nguồn (Linting) công nghệ CI
+    - name: Run Code Linting & Test Simulation
+      run: |
+        echo "--- BẮT ĐẦU QUÁ TRÌNH KIỂM TRA TỰ ĐỘNG (CI) ---"
+        echo "Đang kiểm tra cú pháp file index.html..."
+        grep -q "</html>" index.html && echo "✓ File HTML hợp lệ, đầy đủ thẻ đóng."
+        echo "--- KIỂM TRA HOÀN TẤT - CODE ĐỦ ĐIỀU KIỆN TRIỂN KHAI ---"
